@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Apartment List{% endblock %}
+
+{% block header_title %}List of Apartments{% endblock %}
+
+{% block content %}
+    <h2>List of Apartments</h2>
+    {% for apartment in apartments %}
+        <div class="apartment">
+            <img src="{{ apartment.image.url }}" alt="{{ apartment.name }}" width="300" height="200">
+            <h3>{{ apartment.name }}</h3>
+            <p><strong>Price per Night:</strong> ${{ apartment.price_per_night }}</p>
+            <p><strong>Description:</strong> {{ apartment.description }}</p>
+            <p><strong>Address:</strong> {{ apartment.address }}</p>
+            <a class="button" href="{% url 'book_now' apartment.id %}">Book Now</a>
+        </div>
+    {% endfor %}
+{% endblock %}
