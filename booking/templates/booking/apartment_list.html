@@ -6,14 +6,16 @@
 
 {% block content %}
     <h2>List of Apartments</h2>
-    {% for apartment in apartments %}
-        <div class="apartment">
-            <img src="{{ apartment.image.url }}" alt="{{ apartment.name }}" width="300" height="200">
-            <h3>{{ apartment.name }}</h3>
-            <p><strong>Price per Night:</strong> ${{ apartment.price_per_night }}</p>
-            <p><strong>Description:</strong> {{ apartment.description }}</p>
-            <p><strong>Address:</strong> {{ apartment.address }}</p>
-            <a class="button" href="{% url 'book_now' apartment.id %}">Book Now</a>
-        </div>
-    {% endfor %}
+    <div class="apartment-list">
+        {% for apartment in apartments %}
+            <div class="apartment-item">
+                <img src="{{ apartment.image.url }}" alt="{{ apartment.name }}" width="300" height="200">
+                <h3>{{ apartment.name }}</h3>
+                <p><strong>Price per Night:</strong> ${{ apartment.price_per_night }}</p>
+                <p><strong>Address:</strong> {{ apartment.address }}</p>
+                <p><strong>Description:</strong> {{ apartment.description }}</p>
+                <a class="button" href="{% url 'book_now' apartment.id %}">Book Now</a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
