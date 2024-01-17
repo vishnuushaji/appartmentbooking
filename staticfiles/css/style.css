@@ -1,3 +1,17 @@
+/* Add this to your existing CSS or create a new section for the booking container and form */
+.booking-container {
+    max-width: 600px; /* Adjust the max-width as needed */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Reset some default styling */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
