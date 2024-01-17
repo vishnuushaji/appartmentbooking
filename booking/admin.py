@@ -6,7 +6,7 @@ from django.utils.html import format_html
 
 @admin.register(Apartment)
 class ApartmentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'price_per_night', 'address', 'image')
+    list_display = ('name', 'description', 'price_per_night', 'address', )
    
     def book_now_button(self, obj):
         url = reverse('book_now', args=[obj.id]) 

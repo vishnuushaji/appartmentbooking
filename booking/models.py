@@ -11,7 +11,6 @@ class Apartment(models.Model):
     lat = models.FloatField(default=0, null=True, blank=True, help_text='Latitude')
     long = models.FloatField(default=0, null=True, blank=True, help_text='Longitude')
     max_guest_allowed = models.PositiveIntegerField(default=0, help_text='Maximum guests allowed')
-    image = models.ImageField(upload_to='apartment_images/', blank=True, null=True)
 
     def __str__(self):
         return self.name
