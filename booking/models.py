@@ -20,7 +20,7 @@ class Apartment(models.Model):
 class Booking(models.Model):
     apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE)
     date = models.DateField(default=timezone.now)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  # Add this if you want to associate bookings with users
+    user = models.ForeignKey(User, on_delete=models.CASCADE) 
     num_guests = models.IntegerField(default=0) 
     def __str__(self):
         return f"{self.apartment.name} booked on {self.date}"    
