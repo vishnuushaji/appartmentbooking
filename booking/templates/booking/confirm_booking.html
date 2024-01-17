@@ -4,16 +4,18 @@
 {% block title %}Booking Confirmation{% endblock %}
 
 {% block content %}
-    {% if error_message %}
-        <h2>Not Available</h2>
-        <p class="error">{{ error_message }}</p>
-    {% else %}
-        <h2>Booking Confirmed!</h2>
-        <p>{{ confirmation_message }}</p>
-        <p>Selected Booking Date: {{ booking_date }}</p>
-        <p>Number of Guests: {{ num_guests }}</p>
-        <!-- Add additional confirmation content as needed -->
-    {% endif %}
+    <div class="confirmation-container">
+        {% if error_message %}
+            <h2>Not Available</h2>
+            <p class="error">{{ error_message }}</p>
+        {% else %}
+            <h2>Booking Confirmed!</h2>
+            <p>{{ confirmation_message }}</p>
+            <p>Selected Booking Date: {{ booking_date }}</p>
+            <p>Number of Guests: {{ num_guests }}</p>
+            <!-- Add additional confirmation content as needed -->
+        {% endif %}
 
-    <a href="{% url 'apartment_list' %}">Home</a>
+        <a href="{% url 'apartment_list' %}" class="home-button">Home</a>
+    </div>
 {% endblock %}
