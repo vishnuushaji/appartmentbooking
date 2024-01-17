@@ -11,7 +11,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #391f77;
+    background-color: #1b500b;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -23,7 +23,7 @@ header h1 {
 
 /* Navigation Styles */
 nav {
-    background-color: #555;
+    background-color: #7b24b6;
     padding: 0.5rem;
 }
 
