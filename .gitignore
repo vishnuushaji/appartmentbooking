@@ -1,7 +1,12 @@
 *.env
+venv/
+.vscode/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+*.pyc
 *.log
-*.pot
-
-appartmentbooking/myproject/__pycache__/
-db.sqlite3
-media
+/staticfiles/
+/media/
