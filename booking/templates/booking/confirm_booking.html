@@ -1,5 +1,6 @@
-<!-- booking/templates/booking/confirm_booking.html -->
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block title %}Booking Confirmation{% endblock %}
 
@@ -13,6 +14,9 @@
             <p>{{ confirmation_message }}</p>
             <p>Selected Booking Date: {{ booking_date }}</p>
             <p>Number of Guests: {{ num_guests }}</p>
+            
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="{% static 'js/alert.js' %}"></script>
         {% endif %}
 
         <a href="{% url 'apartment_list' %}" class="home-button">Home</a>
