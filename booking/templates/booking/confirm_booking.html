@@ -17,15 +17,21 @@
             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <script src="{% static 'js/alert.js' %}"></script>
 
-            <!--  Toastify CSS -->
+            <!-- Include Toastify CSS and JS -->
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-            <!--  Toastify JS library -->
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-           
+            <!-- Include Summernote CSS and JS -->
+            <link rel="stylesheet" href="{% static 'js/summernote-bs4.css' %}">
+            <script src="{% static 'js/summernote-bs4.min.js' %}"></script>
+
+            <!-- Include your custom JavaScript files -->
             <script src="{% static 'js/toastify.js' %}"></script>
+            <script src="{% static 'js/wysiwyg-editor.js' %}"></script>
         {% endif %}
+
+        <textarea id="review" name="review"></textarea>
+        <button onclick="showToast()">any message</button>
 
         <a href="{% url 'apartment_list' %}" class="home-button">Home</a>
     </div>
