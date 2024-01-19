@@ -1,23 +1,20 @@
-
-$(document).ready(function(){
-jQuery.validator.addMethod("lettersonlys", function(value, element) {
-    return this.optional(element) || /^[a-zA-Z ]*$/.test(value);
-});
-
 $(document).ready(function() {
-    // Add validation rules for your form fields
+    // Custom validation method for letters only
+    jQuery.validator.addMethod("lettersonlys", function(value, element) {
+        return this.optional(element) || /^[a-zA-Z ]*$/.test(value);
+    });
+
+    // Initialize jQuery Validation Plugin
     $("#bookingForm").validate({
-       onkeyup: false,
-        onfocusout: function(element,event){
+        onkeyup: false,
+        onfocusout: function(element, event) {
             this.element(element);
         },
-       
-       
         rules: {
             name: {
                 required: true,
                 minlength: 3,
-                lettersonlys: true 
+                lettersonlys: true
             },
             email: {
                 required: true,
@@ -54,5 +51,4 @@ $(document).ready(function() {
             form.submit();
         }
     });
-});
 });
