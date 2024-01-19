@@ -2,6 +2,7 @@
   "dependencies": {
     "jquery-validation": "^1.20.0",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.10.3"
+    "sweetalert2": "^11.10.3",
+    "toastify-js": "^1.12.0"
   }
 }

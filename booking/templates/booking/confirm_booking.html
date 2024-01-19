@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block title %}Booking Confirmation{% endblock %}
 
 {% block content %}
@@ -17,10 +16,17 @@
             
             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <script src="{% static 'js/alert.js' %}"></script>
+
+            <!-- Add Toastify CSS -->
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+            <!-- Add Toastify JS library -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+            <!-- Include your custom Toastify script -->
+            <script src="{% static 'js/toastify.js' %}"></script>
         {% endif %}
 
         <a href="{% url 'apartment_list' %}" class="home-button">Home</a>
     </div>
-
-    
 {% endblock %}
